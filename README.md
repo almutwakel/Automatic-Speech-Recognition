@@ -14,9 +14,11 @@ Feature Extractor (CNN):
   GELU(),
   Conv1d(512, 512, kernel_size=3, padding=1),
   AvgPool1d(kernel_size=3, stride=2)
+
 LSTM:
   LSTM(input_size = 512, hidden_size = 1024, num_layers = 2, 
     dropout=0.5, batch_first=True, bidirectional=True)
+    
 Classifier:
   Linear(2048, 2048),
   GELU(),
